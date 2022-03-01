@@ -27,13 +27,13 @@ This Monthly History collection holds the entire history of water detection on a
 
 ## Example output
 - Slope map.
-![Slope](/Rplot_slope.png)
+![Slope](./img//Rplot_slope.png)
 - Intercept map.
-![Intercept](/Rplot_intercept.png)
+![Intercept](./img//Rplot_intercept.png)
 - Pvalue for slope.
-![PvalueSlope](/Rplot_pvalue_slope.png)
+![PvalueSlope](./img//Rplot_pvalue_slope.png)
 - Pvalue for intercept.
-![PvalueIntercept](/Rplot_pvalue_intercept.png)
+![PvalueIntercept](./img//Rplot_pvalue_intercept.png)
 
 
 ## References
