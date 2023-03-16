@@ -42,15 +42,15 @@ for( rl in 1:nrow(r) ) {
       
       linmod <- coeftest(lm(as.numeric(xy$y) ~ as.numeric(xy$x)))
       
-      slopereg[i] <- linmod[2]
-      intreg[i] <- linmod[1]
-      pvalslope[i] <- linmod[8]
-      pvalint[i] <- linmod[7]
+      slopereg[i] <- linmod[2,1]
+      intreg[i] <- linmod[1,1]
+      pvalslope[i] <- linmod[2,4]
+      pvalint[i] <- linmod[1,4]
       
-      if(is.null(slopereg)) slopereg = 1
-      if(is.null(intreg)) intreg = 1
-      if(is.null(pvalslope)) pvalslope = 1
-      if(is.null(pvalint)) pvalint = 1
+      if(is.nan(slopereg[i]) || is.infinite(slopereg[i])) slopereg[i] <- NA
+      if(is.nan(intreg[i]) || is.infinite(intreg[i])) intreg[i] <- NA
+      if(is.nan(pvalslope[i]) || is.infinite(pvalslope[i])) pvalslope[i] <- NA
+      if(is.nan(pvalint[i]) || is.infinite(pvalint[i])) pvalint[i] <- NA
       
     } else {
       
